@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <title>🛣️What's The Interchange?🛣️</title>
+        <h1>
+            What's the interchange?
+        </h1>
+        <p class="tip">
+            Tip: We Capitalise Every Word In The Answers, And We Also Check Them Letter By Letter!
+        </p>
+    </head>
+    <body onload="getRandomImage()">
+        <!--The main container-->
+        <div class="main-container">
+            <!--Div for randomly generated image-->
+            <div class="question-image" id="question-image"></div>
+            <!--Button for skipping picture-->
+            <button class="skip-btn" id="skip-btn" onclick="skippedNF()">
+                <b>Skips: 2</b>
+            </button>
+            <!--Input for answer-->
+            <input class="answer-input" id="answer-input" type="text"></input>
+            <!--Button to submit answer-->
+            <button class="submit-btn" onclick="checkAnswer()">
+                <b>Submit</b>
+            </button>
+            <!--Score text-->
+            <p class="score-txt" id="score-txt-html">
+                Score: 0
+            </p>
+        </div>
+    </body>
+</html>
