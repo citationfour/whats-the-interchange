@@ -11,7 +11,7 @@
             Tip: We Capitalise Every Word In The Answers, And We Also Check Them Letter By Letter!
         </p>
     </head>
-    <body onload="getRandomImage()">
+    <body onload="onLoad()">
         <!--The main container-->
         <div class="main-container">
             <!--Div for randomly generated image-->
@@ -30,6 +30,24 @@
             <p class="score-txt" id="score-txt-html">
                 Score: 0
             </p>
+        </div>
+        <button class="start-btn" id="start-btn" onclick="start()">
+            <p class="start-text">
+                <b>Start</b>
+            </p>
+        </button>
+        <div class="timer">
+            <p class="timer-text" id="timer-text">
+                60
+            </p>
+        </div>
+        <!--The End Screen-->
+        <div class="end-screen" id="end-screen">
+            <p class="end-screen-text-1">
+                Time's Up!
+            </p>
+            <p class="end-screen-score" id="end-screen-score"></p>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text='I just played "Whats The Interchange?"! Try the game out yourself!' data-related="elfryt" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </body>
 </html>

@@ -21,9 +21,11 @@ h1{
     left: 455px;
 }
 
+/*main-container*/
+
 .main-container{
     border: 5px solid black;
-    left: 225px;
+    left: 180px;
     top: 125px;
     width: 900px;
     height: 580px;
@@ -86,4 +88,69 @@ h1{
     position: absolute;
     top: 380px;
     right: 100px;
+}
+
+/*timer*/
+
+.timer{
+    width: 200px;
+    height: 80px;
+    right: 50px;
+    position: absolute;
+}
+
+.timer-text{
+    font-family: 'Oswald', sans-serif;
+    font-size: 100px;
+    text-align: center;
+}
+
+.start-btn{
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    right: 110px;
+    top: 180px;
+    background-color: rgb(255, 115, 0);
+}
+
+.start-text{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: auto;
+    top: -13px;
+    left: 19px;
+}
+
+/*End Screen*/
+.end-screen{
+    background-color: rgba(210, 210, 210, 0.9);
+    border: 2px solid black;
+    z-index: 1000;
+    position: absolute;
+    left: 100px;
+    width: 1200px;
+    height: 400px;
+}
+
+.end-screen-text-1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    color: black;
+    top: 25px;
+    text-align: center;
+}
+
+.end-screen-score{
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    top: 150px;
+}
+
+.twitter-share-button{
+    position: absolute;
+    left: 500px;
 }
