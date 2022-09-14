@@ -14,7 +14,7 @@ imageArray[11] = 'Images/Judge_Harry_Pregerson_Interchange.jpg';
 imageArray[12] = 'Images/Nanpu_Bridge_Interchange.png';
 imageArray[13] = 'Images/Takao_San_Interchangejpg.jpg';
 imageArray[14] = 'Images/lofthouse_junction.jpg';
-imageArray[15] = 'Images/Tom_Moreland_Interchange';
+imageArray[15] = 'Images/Tom_Moreland_Interchange.jpg';
 imageArray[16] = 'Images/Higashiosaka_Loop_Osaka_Japan.jpg';
 imageArray[17] = 'Images/Xinzhuang_interchange_shanghai.jpg';
 
@@ -82,6 +82,8 @@ function getRandomImage(){
 
     //Show Picture
     document.getElementById("question-image").innerHTML = ('<img src="' + img + '"width=450px; height=550px; margin-left: auto; margin-right: auto;">');
+
+    console.log(img);
 }
 
 function checkAnswer(){
@@ -112,8 +114,8 @@ function checkAnswer(){
 }
 
 function start(){
-    const startBtn = document.getElementById("start-btn");
-    startBtn.style.display = 'none';
+    document.getElementById("start-btn").style.display = 'none';
+    document.getElementById("end-screen").style.visibility = 'none';
     console.log("start");
 
     getRandomImage();
@@ -121,17 +123,23 @@ function start(){
 }
 
 function timer(){
-    var timerText = document.getElementById("timer-text");
     timerLength = 60;
 
     const interval = setInterval(() => {
-        timerText.innerHTML = (timerLength);
+        document.getElementById("timer-text").innerHTML = (timerLength);
         console.log(timerLength)
         timerLength--;
 
-        if (timerLength < 0){
+        if (timerLength == 0){
+            console.log("finished at " + timerLength + " seconds");
             clearInterval(interval);
-            timerText.innerHTML("Time's Up"); 
+            document.getElementById("timer-text").innerHTML = ("Time's Up");
+            endScreen();
         }
     }, 1000);
+}
+
+function endScreen(){
+    document.getElementById("end-screen").style.display = 'initial';
+    document.getElementById("end-screen-score").innerHTML = "You scored: " + score;
 }
